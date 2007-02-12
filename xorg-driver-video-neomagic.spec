@@ -1,5 +1,5 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
-Summary(pl):	Sterownik obrazu X.org dla uk³adów graficznych Neomagic
+Summary(pl.UTF-8):   Sterownik obrazu X.org dla ukÅ‚adÃ³w graficznych Neomagic
 Name:		xorg-driver-video-neomagic
 Version:	1.1.1
 Release:	0.1
@@ -31,9 +31,9 @@ MagicGraph 128ZV+ (NM2097), MagicGraph 128XD (NM2160), MagicGraph
 256AV (NM2200), MagicGraph 256AV+ (NM2230), MagicGraph 256ZX (NM2360),
 MagicGraph 256XL+ (NM2380).
 
-%description -l pl
-Sterownik obrazu X.org dla uk³adów graficznych Neomagic, jakie mo¿na
-znale¼æ w wielu laptopach. Obs³uguje nastêpuj±ce uk³ady: MagicGraph
+%description -l pl.UTF-8
+Sterownik obrazu X.org dla ukÅ‚adÃ³w graficznych Neomagic, jakie moÅ¼na
+znaleÅºÄ‡ w wielu laptopach. ObsÅ‚uguje nastÄ™pujÄ…ce ukÅ‚ady: MagicGraph
 128 (NM2070), MagicGraph 128V (NM2090), MagicGraph 128ZV (NM2093),
 MagicGraph 128ZV+ (NM2097), MagicGraph 128XD (NM2160), MagicGraph
 256AV (NM2200), MagicGraph 256AV+ (NM2230), MagicGraph 256ZX (NM2360),

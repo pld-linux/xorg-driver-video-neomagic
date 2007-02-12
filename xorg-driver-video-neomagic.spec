@@ -1,5 +1,5 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
-Summary(pl.UTF-8):   Sterownik obrazu X.org dla układów graficznych Neomagic
+Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych Neomagic
 Name:		xorg-driver-video-neomagic
 Version:	1.1.1
 Release:	0.1

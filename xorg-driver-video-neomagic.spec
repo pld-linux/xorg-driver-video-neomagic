@@ -21,6 +21,9 @@ BuildRequires:	xorg-proto-xf86dgaproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 Requires:	xorg-xserver-server >= 1.0.99.901
+Obsoletes:	X11-driver-neomagic < 1:7.0.0
+Obsoletes:	XFree86-NeoMagic
+Obsoletes:	XFree86-driver-neomagic < 1:7.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

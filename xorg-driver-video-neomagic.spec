@@ -1,13 +1,12 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych Neomagic
 Name:		xorg-driver-video-neomagic
-Version:	1.2.4
-Release:	5
+Version:	1.2.5
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-neomagic-%{version}.tar.bz2
-# Source0-md5:	2d722ee9b9fe8da49109f280689c9c25
-Patch0:		neomagic-usleep.patch
+# Source0-md5:	423b82b776444f88adbf207fb6a82c1a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -48,7 +47,6 @@ MagicGraph 256XL+ (NM2380).
 
 %prep
 %setup -q -n xf86-video-neomagic-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}

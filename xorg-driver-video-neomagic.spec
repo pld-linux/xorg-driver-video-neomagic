@@ -12,6 +12,7 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
@@ -19,10 +20,9 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
-BuildRequires:  rpmbuild(macros) >= 1.389
-%requires_xorg_xserver_videodrv
+%{?requires_xorg_xserver_videodrv}
 Requires:	xorg-xserver-server >= 1.0.99.901
 Obsoletes:	X11-driver-neomagic < 1:7.0.0
 Obsoletes:	XFree86-NeoMagic
@@ -31,19 +31,29 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 X.org video driver for Neomagic graphics chipsets found in many laptop
-computers. It supports the following chipsets: MagicGraph 128
-(NM2070), MagicGraph 128V (NM2090), MagicGraph 128ZV (NM2093),
-MagicGraph 128ZV+ (NM2097), MagicGraph 128XD (NM2160), MagicGraph
-256AV (NM2200), MagicGraph 256AV+ (NM2230), MagicGraph 256ZX (NM2360),
-MagicGraph 256XL+ (NM2380).
+computers. It supports the following chipsets:
+- MagicGraph 128 (NM2070),
+- MagicGraph 128V (NM2090),
+- MagicGraph 128ZV (NM2093),
+- MagicGraph 128ZV+ (NM2097),
+- MagicGraph 128XD (NM2160),
+- MagicGraph 256AV (NM2200),
+- MagicGraph 256AV+ (NM2230),
+- MagicGraph 256ZX (NM2360),
+- MagicGraph 256XL+ (NM2380).
 
 %description -l pl.UTF-8
 Sterownik obrazu X.org dla układów graficznych Neomagic, jakie można
-znaleźć w wielu laptopach. Obsługuje następujące układy: MagicGraph
-128 (NM2070), MagicGraph 128V (NM2090), MagicGraph 128ZV (NM2093),
-MagicGraph 128ZV+ (NM2097), MagicGraph 128XD (NM2160), MagicGraph
-256AV (NM2200), MagicGraph 256AV+ (NM2230), MagicGraph 256ZX (NM2360),
-MagicGraph 256XL+ (NM2380).
+znaleźć w wielu laptopach. Obsługuje następujące układy:
+- MagicGraph 128 (NM2070),
+- MagicGraph 128V (NM2090),
+- MagicGraph 128ZV (NM2093),
+- MagicGraph 128ZV+ (NM2097),
+- MagicGraph 128XD (NM2160),
+- MagicGraph 256AV (NM2200),
+- MagicGraph 256AV+ (NM2230),
+- MagicGraph 256ZX (NM2360),
+- MagicGraph 256XL+ (NM2380).
 
 %prep
 %setup -q -n xf86-video-neomagic-%{version}
@@ -54,8 +64,7 @@ MagicGraph 256XL+ (NM2380).
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	--disable-static
+%configure
 
 %{__make}
 

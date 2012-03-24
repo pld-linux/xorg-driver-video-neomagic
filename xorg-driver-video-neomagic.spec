@@ -1,14 +1,14 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych Neomagic
 Name:		xorg-driver-video-neomagic
-Version:	1.2.5
-Release:	6
+Version:	1.2.6
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-neomagic-%{version}.tar.bz2
-# Source0-md5:	423b82b776444f88adbf207fb6a82c1a
+# Source0-md5:	e5f25c01492d96ddd0171454a8e6bd39
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
@@ -20,7 +20,7 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 %{?requires_xorg_xserver_videodrv}
 Requires:	xorg-xserver-server >= 1.0.99.901
@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT

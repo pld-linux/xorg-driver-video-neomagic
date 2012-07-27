@@ -1,12 +1,12 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych Neomagic
 Name:		xorg-driver-video-neomagic
-Version:	1.2.6
+Version:	1.2.7
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-neomagic-%{version}.tar.bz2
-# Source0-md5:	e5f25c01492d96ddd0171454a8e6bd39
+# Source0-md5:	ba25b6347b375eb3e9bd62066dc6c61f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake

@@ -1,28 +1,30 @@
 Summary:	X.org video driver for Neomagic graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych Neomagic
 Name:		xorg-driver-video-neomagic
-Version:	1.3.0
-Release:	2
+Version:	1.3.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-neomagic-%{version}.tar.bz2
-# Source0-md5:	349d5254d09eb46f2a1f151cd423b89a
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-neomagic-%{version}.tar.xz
+# Source0-md5:	737c60a2cd12eb2bf14fbdb08d5ca27f
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+BuildRequires:	xz
 %{?requires_xorg_xserver_videodrv}
 Requires:	xorg-xserver-server >= 1.0.99.901
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-neomagic < 1:7.0.0
-Obsoletes:	XFree86-NeoMagic
+Obsoletes:	XFree86-NeoMagic < 4
 Obsoletes:	XFree86-driver-neomagic < 1:7.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
